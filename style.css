@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+#message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+
+.about {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem para uma nova linha */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.gallery-img {
+    width: 150px; /* Ajuste o tamanho das imagens */
+    height: auto; /* Mantém a proporção */
+}
+
+
+
+
+
+
+
+
+
+
+

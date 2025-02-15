@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel & Família</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/736x/63/1e/d7/631ed79d72fcaa9e2179c8710a390a41.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: none;
+            padding: 20px;
+            font-size: 24px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #2f1cba;
+        }
+        .imagem-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .imagem {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .imagem:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.8);
+        }
+        button {
+            background: #53c147;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #53c147;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            margin-top: 20px;
+        }
+        textarea {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="src/musica.mp3/japaozin-solinho-do-brabo-d56c033d.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    
+    <header>
+        <h1>Daniel & Família</h1>
+        <button id="play-music">🎵 Tocar Música</button>
+        <nav>
+            <ul>
+                <li><a href="#ferias">Férias em Família</a></li>
+                <li><a href="#galeria">Fotos em Família</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Bem-vindo ao nosso site! Somos uma família unida e cheia de amor. Aqui compartilhamos momentos especiais.</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galeria de Fotos</h2>
+        <div class="imagem-container">
+            <img src="./src/imagem.jpg/312848816_549400190294625_4871710832053487160_n.jpg" alt="Foto 1" class="imagem">
+            <img src="./src/imagem.jpg/314403489_962663381790579_7676402901953144250_n.jpg" alt="Foto 2" class="imagem">
+            <img src="./src/imagem.jpg/331653754_5948445118581995_7326644822696881412_n.jpg" alt="Foto 3" class="imagem">
+            <img src="./src/imagem.jpg/337327227_618472639610573_3920264797686749763_n.jpg" alt="Foto 4" class="imagem">
+            <img src="./src/imagem.jpg/339148851_788552955950073_8556688550664219924_n.jpg" alt="Foto 5" class="imagem">
+            <img src="./src/imagem.jpg/358345663_1956333824742497_2620600800214985109_n.jpg" alt="Foto 6" class="imagem">
+                     
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="Daniel Matos" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" value="dbtista_200@hotmail.com" required>
+
+            <label for="email">Telefone:</label>
+            <input type="fone" id="fone" name="fone" value="(83) 998127914" required>
+
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required><b>Olá! Meu nome é Daniel Matos, tenho 40 anos e sou estudante de Análise e Desenvolvimento de Sistemas na UNINASSAU. Tenho paixão pela tecnologia e estou focado em me tornar programador. Meu objetivo é conseguir meu primeiro emprego na área de tecnologia em 2025. Seja bem-vindo ao nosso site, onde compartilhamos nossas memórias e momentos especiais em família!</b></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Daniel & Família - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const music = document.getElementById("background-music");
+        const playButton = document.getElementById("play-music");
+
+        playButton.addEventListener("click", () => {
+            if (music.paused) {
+                music.play();
+                playButton.textContent = "⏸️ Pausar Música";
+            } else {
+                music.pause();
+                playButton.textContent = "🎵 Tocar Música";
+            }
+        });
+    </script>
+</body>
+</html>
